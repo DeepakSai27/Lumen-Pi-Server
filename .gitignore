@@ -1,0 +1,12 @@
+# Never commit credentials or keys
+*.env
+*.key
+*.pem
+id_*
+pi-user.txt
+userconf.txt
+
+# OS / editor
+Thumbs.db
+desktop.ini
+.vscode/
