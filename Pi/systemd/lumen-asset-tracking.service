@@ -1,0 +1,15 @@
+[Unit]
+Description=Lumen Asset Tracking server (FastAPI)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=raspberrylumen
+WorkingDirectory=/home/raspberrylumen/lumen-asset-tracking/Server
+EnvironmentFile=/home/raspberrylumen/lumen-asset-tracking/Server/lumen.env
+ExecStart=/home/raspberrylumen/lumen-asset-tracking/Server/.venv/bin/python -m uvicorn --factory app.main:create_app --host 0.0.0.0 --port 8000
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

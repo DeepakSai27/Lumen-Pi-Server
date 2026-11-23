@@ -1,0 +1,7 @@
+[Unit]
+Description=Lumen Asset Tracking nightly database backup
+
+[Service]
+Type=oneshot
+User=raspberrylumen
+ExecStart=/usr/bin/python3 /home/raspberrylumen/lumen-asset-tracking/backup-db.py
